@@ -1,4 +1,4 @@
-###### DevExpress SplitContainerControl的使用
+### DevExpress SplitContainerControl的使用
 
 1、默认横向分割修改成纵向分割
 
