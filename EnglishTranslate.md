@@ -1,0 +1,3 @@
+20180601 Translation
+
+In the past, owning a private car was a luxurious thing for most China people. Nowadays, private cars can be seen everywhere in China.  The car has become an integral part of people's life, as they only drive to and form work, but also travel around by car. The number of cars in some cities has been growing so rapidly that traffic jams and the  problem of insufficient parking spaces have become more  and more serious. The municipal governments of these cities have to develop some new rules to limit the number of cars on the  road. As air pollution gets more serious, now more and more people choose to buy new energy vehicles. The Chinese government has also taken some measures to support the development of new energy vehicles.
