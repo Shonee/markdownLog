@@ -52,3 +52,30 @@ All mountains in a single glance?
 （白话文：文化在自己手里）
 
 齐多甘泉，冠于天下  Qi is sweet in the league, more,
+
+
+
+
+
+##### 四级句子收集：
+
+It was a great pleasure to hear the good news that you are accepted by college of Oxford.
+听说你被牛津大学录取了，我真是太高兴了。
+
+The old saying "Spare the rod，spoil the child" was taken as a motto by some parents.
+有些家长信奉“孩子不打不成器”这句老话。
+
+With the efforts of all parts concerned, the problem will be solved thoroughly.
+如果我们全力以赴，那么问题一定能够彻底解决。
+
+It is therefore not surprising that all the people who know you say you are a genius.
+所以，认识你的人都说你是天才，这并不奇怪。
+
+The statistics make the fact undoubtedly true that everything in the universe has its proper place.
+这些数据表明，宇宙间的每样东西都有自己合适的位置，这是毋庸置疑的。
+
+Although this view is widely held，there is little evidence that education can be obtained at any age and at any place.
+尽管这一观点被广泛接受，但是很少有证据表明，教育能够在任何地点、任何年龄层中进行。
+
+Considering **overall** **efficiency**, I take it as a matter of **necessity** to hurry up reforming our**domestic** policies.
+考虑到整体效率问题，我认为加快改革国内政策是很有必要的。
