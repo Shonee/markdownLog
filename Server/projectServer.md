@@ -58,6 +58,8 @@ Can‘t have a partition outside the disk --> “无法在磁盘外创建分区�
 
 [U盘装系统教程2](https://www.jb51.net/softs/582923.html)
 
+[ESXI系统安装](https://blog.51cto.com/zhangzhk/2352758?from=singlemessage)
+
 [ESXI系统设置](https://www.jb51.net/softs/582923.html)
 
 关于Svphere虚拟机安装虚拟机tool：
@@ -76,87 +78,3 @@ Can‘t have a partition outside the disk --> “无法在磁盘外创建分区�
 
 
 
-id:054914da-7e07-49da-8328-1b42d3bbef81
-
-Memo(备注):
-
-supplier(供应商):
-
-create_name:管理员
-
-MixRateEN(混率(英文)):
-
-Unit(标准计量单位):
-
-MatNO(物料编码):12312
-
-unitPrice(采购单价):
-
-MixRateJP(混率(日文)):
-
-UnitName(记账单位):kg
-
-update_date:2019/6/1 星期六 下午 21:25:19
-
-PFNo(品番):
-
-MatNOK3(K3中的物料编码):12132
-
-ColorNO(色号):色号i15
-
-KZ:0
-
-CUnit:
-
-MinProcure(最小采购数量):0
-
-create_by:0
-
-isdeleted:False
-
-create_date:2019/6/1 星期六 下午 21:25:19
-
-update_by:0
-
-update_name:管理员
-
-MatClassID(物料子类):8f6c2892-88f6-4661-af41-a9e924bebe5d
-
-kemu(科目):
-
-constituent(成分):
-
-MatMemo(物料说明):
-
-IsBatch(是否批次管理):False
-
-supplierNo(供应商编码):
-
-MatName(物料名称):涤棉物料123
-
-MT:01
-
-Method(计价方法):
-
-SpeSub(规格型号):
-
-MixRateCH(混率(中文)):
-
-taxRate(税率):0
-
-unitPricePrecision(单价精度):0
-
-
-
-
-
-
-
-update_date:
-	 2019/6/1 星期六 下午 21:25:19 -> 2019/6/1 星期六 下午 21:42:45
-
-ColorNO(色号):
-	 色号i15 -> 色号1111111
-
-KZ:
-	 0.00 -> 0

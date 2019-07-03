@@ -10,6 +10,14 @@
 
 ​	属性、事件、代码添加事件
 
+```c#
+//设置gridView可以编辑 
+this.winGridViewPager1.gridView1.OptionsBehavior.ReadOnly = false;
+this.winGridViewPager1.GridView1.OptionsBehavior.Editable = true;
+//设置新增行的位置
+this.winGridViewPager1.gridView1.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
+```
+
 3、`DataSetAdapter：`
 
 ​	适配器插入(更新表或者行对象)数据
@@ -248,6 +256,8 @@ private void bindProviders()
 bindProviders();
 //④在编辑或者保存状态下取值函数中将name转义成ID存储，为空时索引报错怎么办？？
 info.ProvID = BLLFactory<PU_Providers>.Instance.Find(string.Format("ProviderName = '{0}'", txtProvID.Text))[0].Id;
+//⑤在显示是将ID转义成Name进行显示
+
 ```
 
 19、父子表关系关联时的数据传递
@@ -258,5 +268,70 @@ System.Windows.Forms.Form form1 =
 //tag中的对象是选中行的info对象，接收时使用强制转换成对应info
 form1.Tag = this.winGridViewPager1.gridView1.GetFocusedRow();
 addForm(form1);
+```
+
+20、实现逻辑删除功能
+
+```c#
+//在Deletedata()中修改直接删除数据为下面代码，实现修改插入
+MT_MatInInfo info = BLLFactory<MT_MatIn>.Instance.FindByID(ID);
+                info.Isdeleted = true;
+                BLLFactory<MT_MatIn>.Instance.Update(info, info.Id);
+//修改BindData()方法中GetConditionSql()中添加一个搜索条件 isdeleted == 0
+condition.AddCondition("isdelete", 0, SqlOperator.Like);
+```
+
+21、实现gridView自定义显示内容！！
+
+1. ​	新建一个DataTable,用来存放自定义的数据，并作为数据源绑定给gridView
+
+2. ​	新建Row，用于接收数据库中的每一行的数据，只能每个列进行赋值，循环迭代
+
+3. ​	将Row添加到table，将table绑定到gridView
+
+4. ```c#
+   //重新定义数据源进行绑定，便于操作gridView显示内容
+   string columns = "id,MatInNO,InDepartID,InDepotID,InType,ForID,InDatetime,InWorkerID,KGWorkerID,SendMan,IsChecked,InMemo,create_date,create_name,update_date,update_name";
+   //根据自定义字符串创建dataTable
+   DataTable dt = DataTableHelper.CreateTable(columns);
+               foreach (MT_MatInInfo info in list) 
+               {
+                   DataRow row = dt.NewRow();
+                   row["id"] = info.Id;
+                   row["MatInNO"] = info.MatInNO;
+                   row["InDepotID"] = BLLFactory<SR_Depots>.Instance.FindByID(info.InDepotID).DepotName;
+                   row["InDepartID"] = BLLFactory<OU>.Instance.FindByID(info.InDepartID).Name;
+                   row["InType"] = info.InType;
+                   //row["ForID"] = BLLFactory<PU_SendItem>.Instance.FindByID(info.ForID).BuyOrd;
+                   row["InDatetime"] = info.InDatetime;
+                   row["InWorkerID"] = info.InWorkerID;
+                   row["KGWorkerID"] = info.KGWorkerID;
+                   row["SendMan"] = info.SendMan;
+                   row["IsChecked"] = info.IsChecked;
+                   row["InMemo"] = info.InMemo;
+                   row["create_date"] = info.Create_date;
+                   row["create_name"] = info.Create_name;
+                   row["update_date"] = info.Update_date;
+                   row["update_name"] = info.Update_name;       
+                   dt.Rows.Add(row);   
+               }
+               //绑定数据源
+                   this.winGridViewPager1.DataSource = dt.DefaultView;
+   ```
+
+
+22、实现`gridView`显示数据的编辑，按钮，下拉列表等功能
+
+###### [实现编辑](https://www.cnblogs.com/wuhuacong/p/6220826.html)
+
+###### [实现按钮、下拉列表](https://www.cnblogs.com/wuhuacong/p/6240114.html)
+
+```c#
+//关闭只读，开启可编辑
+this.winGridViewPager1.gridView1.OptionsBehavior.ReadOnly = false;             this.winGridViewPager1.gridView1.OptionsBehavior.Editable = true;
+//如果只编辑部分列，则要开启全部，然后将其余列的编辑关闭
+this.winGridViewPager1.GridView1.Columns.ColumnByFieldName("DeliveryNum").OptionsColumn.AllowEdit = false;
+//只有在关闭已读、开启编辑状态下，才能实现下拉列表等功能
+
 ```
 

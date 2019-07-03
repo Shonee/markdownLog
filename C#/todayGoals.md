@@ -54,17 +54,87 @@
 
 9. 送货清单表
 
-   1. 由合同清单生成，但是根据实际送货变化
+   - [ ] 由合同清单生成，但是根据实际送货变化
+   - [ ] 一点都没有写呢！！！！
 
 10. 物料信息表添加了新字段
-   1. 物料单价
-   2. 库存信息
-   3. 需要新增字段常备库存(isStanding)
 
-11. 入库信息表
+   11. 物料单价
 
-12. 物料入库清单表
+   12. 库存信息
 
-    1. 部分外键没有设置好，供应商ID，合同ID等
+   3. 需要新增字段常备库存(`isStanding`)
 
-13. 。。。
+14. 入库信息表
+
+    - [x] 仓库名称和入库部门搜索功能添加
+    - [x] 入库信息编辑数据字典添加
+    - [x] 入库信息编辑关联数据下拉列表
+    - [x] 操作人信息添加
+    - [ ] 生产归还针对**领料表**中没有可以用来显示的 **列**
+    - [x] 逻辑删除功能实现，并针对搜索数据实现删除过滤
+    - [ ] gridView显示列中进行ID-Name的转义
+
+15. 物料入库清单表
+
+    - [ ] 部分外键没有设置好，供应商ID，合同ID等
+    - [ ] 搜索功能实现
+    - [ ] 新增编辑弹框是一个`gridView`编辑界面,通过条件显示编辑保存
+
+16. 出库信息新建编辑表(信息和详情单放在一个页面添加和编辑)
+
+    - [ ] 信息内容显示在编辑框中，保存时存入信息表中
+    - [ ] 详情单显示在gridView中，编辑后保存实现存入详单数据库
+    - [ ] gridView先手内容的转义
+    - [ ] gridView的编辑保存实现
+    - [ ] gridView的页脚分页信息去掉
+
+17. 出库信息表
+
+18. 出库清单表
+
+19. 
+
+20. 000
+
+
+
+
+
+string where = GetConditionSql2();
+            List<PL_DrawMatPlanItemInfo> list = BLLFactory<PL_DrawMatPlanItem>.Instance.FindWithPager(where, this.winGridViewPager2.PagerInfo);
+
+            string tableColumns = "DrawPlanID,ColorMatchID,MatNum,DrawNum,UnitName,update_name,update_date,create_name,create_date";
+            DataTable dt = DataTableHelper.CreateTable(tableColumns);
+            DataRow dr = null;
+    
+            //Guid Mnameandcolor = materialsadapter.ScalarQueryMatnameColornoById(critemdetailcolormatchapter.ScalarQueryMatIDById(drawmatplanitemadapter.ScalarQueryIdByColormatchid()));
+    
+            foreach (PL_DrawMatPlanItemInfo info in list)
+            {
+                //Guid g = (Guid)drawmatplanitemadapter.ScalarQueryIdByColormatchid(info.ColorMatchID);
+                //根据colormatchid也就是等于colormatch表的id得到Matid
+                Guid matid = (Guid)critemdetailcolormatchapter.ScalarQueryMatIDById(info.ColorMatchID);
+                //string Mnamecolor = materialsadapter.ScalarQueryMatnameColornoById(matid);
+                string Mname = materialsadapter.ScalarQueryMatnameById(matid);
+                string Mcolor = materialsadapter.ScalarQueryColorNoById(matid);
+                 dr = dt.NewRow();
+               //dr["DrawPlanID"] = draw.ScalarConTitleByid(info.ConID);
+               dr["DrawPlanID"] = drawmatplanadpter.ScalarDrawNoQuerybyId(info.DrawPlanID);
+    
+               dr["ColorMatchID"] = Mname + "(" + Mcolor + ")";
+                //dr["ColorMatchID"] = info.ColorMatchID;
+    
+                dr["MatNum"] = info.MatNum;
+                dr["DrawNum"] = info.DrawNum;
+                dr["UnitName"] = info.UnitName;
+                dr["update_name"] = info.Update_name;
+                dr["update_date"] = info.Update_date;
+                dr["create_name"] = info.Create_name;
+                dr["create_date"] = info.Create_date;
+    
+                dt.Rows.Add(dr);
+    
+            }
+            this.winGridViewPager2.DataSource = dt.DefaultView; 
+          //  this.winGri

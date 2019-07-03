@@ -1,14 +1,28 @@
 ##### Git-Hub资源
 
-###### [Chrome插件英雄榜，看看大家都在用什么插件提高效率](https://github.com/zhaoolee/ChromeAppHeroes)
+- ###### [Chrome插件英雄榜，看看大家都在用什么插件提高效率](https://github.com/zhaoolee/ChromeAppHeroes)
 
-###### [爬虫学习项目，到这里来就对了](https://github.com/facert/awesome-spider)
+- ###### [爬虫学习项目，到这里来就对了](https://github.com/facert/awesome-spider)
 
-###### [最全中文诗歌诗词文集数据库](https://github.com/chinese-poetry/chinese-poetry)
+- ###### [最全中文诗歌诗词文集数据库](https://github.com/chinese-poetry/chinese-poetry)
 
-###### [结构化算法刷题训练指南，快刷起来](https://github.com/apachecn/awesome-algorithm)
+- ###### [结构化算法刷题训练指南，快刷起来](https://github.com/apachecn/awesome-algorithm)
 
-###### [MarkDown编辑器](https://github.com/notable/notable)
+- ###### [MarkDown编辑器](https://github.com/notable/notable)
+
+- ###### [Java项目](https://mp.weixin.qq.com/s/e0HSG0LU3utw3Oi7TauXAw)
+
+- ###### [GitHub-java热门项目](https://github.com/trending/java?since=monthly)
+
+- ###### [从程序员到CTO](https://github.com/0voice/from_coder_to_expert)
+
+- ###### [互联网架构设计](https://github.com/davideuler/architecture.of.internet-product)
+
+- ###### [后端架构师技术图谱](https://github.com/xingshaocheng/architect-awesome)
+
+- ###### [从0到1设计大型系统](https://github.com/donnemartin/system-design-primer/blob/master/README-zh-Hans.md)
+
+
 
 
 
@@ -26,6 +40,8 @@
 
 ###### [油猴脚本下载网址](https://greasyfork.org/en/scripts)
 
+###### [SpringBoot中文社区](http://springboot.fun/)
+
 
 
 ###### [之前收藏网站的文本](Pages.txt)
@@ -42,3 +58,6 @@ public static void main(string[] args){
 }
 ```
 
+#### 游戏区
+
+###### [休闲游戏](https://t.cn/E9tsC30)
