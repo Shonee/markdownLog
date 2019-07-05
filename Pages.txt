@@ -1,47 +1,47 @@
-��վ�ղ�
-	1. https://uzer.me/z/apps --> �ƶ�Ӧ�ã� https://uzer.me --> UZER�ƶ˳���Ӧ�ÿռ䣻
-	2. https://www.liaoxuefeng.com/ -->��ѩ������� http://www.cnplugins.com/ --> �ȸ�����
-	3. https://www.oschina.net/ --> ��Դ�й��� https://c.runoob.com/ --> ���񹤾����߱�̣�
-	4. https://www.html5tricks.com/ --> H5�̳���Դ����https://github.com/ --> GitHub��վ��
-	5. http://www.iplaypy.com/ --> ������pythonѧϰ��
+网站收藏
+	1. https://uzer.me/z/apps --> 云端应用； https://uzer.me --> UZER云端超级应用空间；
+	2. https://www.liaoxuefeng.com/ -->廖雪峰官网； http://www.cnplugins.com/ --> 谷歌插件；
+	3. https://www.oschina.net/ --> 开源中国； https://c.runoob.com/ --> 菜鸟工具在线编程；
+	4. https://www.html5tricks.com/ --> H5教程资源网；https://github.com/ --> GitHub网站；
+	5. http://www.iplaypy.com/ --> 玩蛇网python学习；
 	6. 
-	7. https://checkio.org/ --> �ô�������Ϸ��https://e.codecombat.163.com/account/migrate.htm --> ����Ϸѧ��̣�
-	8. https://freecodecamp.cn/home --> ���߱��ѧϰ��վ��
-	9. http://ife.baidu.com/2016/task/all --> �ٶ�ǰ�˼���ѧԺ�� https://www.patest.cn --> PAT������ϰ��
-	10. https://www.nowcoder.com/ --> ţ����ˢ�⣻ http://www.acmcoder.com/index --> ������ˢ�⣻
-	11. https://leetcode.com/ --> leetcode�㷨��
+	7. https://checkio.org/ --> 敲代码玩游戏；https://e.codecombat.163.com/account/migrate.htm --> 玩游戏学编程；
+	8. https://freecodecamp.cn/home --> 在线编程学习网站；
+	9. http://ife.baidu.com/2016/task/all --> 百度前端技术学院； https://www.patest.cn --> PAT考试练习；
+	10. https://www.nowcoder.com/ --> 牛客网刷题； http://www.acmcoder.com/index --> 赛码网刷题；
+	11. https://leetcode.com/ --> leetcode算法；
 	12. 
-	13. https://greasyfork.org/en/scripts
-	14. https://openuserjs.org/ --> �ͺ�ű���ȫ��
+	13. https://greasyfork.org/en/scripts  -->  https://extfans.com  -->谷歌插件网
+	14. https://openuserjs.org/ --> 油猴脚本大全；
 	15. 
-	16. http://www.moocs.org.cn/ --> Ļ�ε����� http://search.chongbuluo.com/ --> �沿��������
-	17. http://lackar.com/aa/ --> Anywhere������
+	16. http://www.moocs.org.cn/ --> 幕课导航； http://search.chongbuluo.com/ --> 虫部落搜索；
+	17. http://lackar.com/aa/ --> Anywhere导航；
 	18. 
-	19. http://www.dycsm.com/ --> ��Ӱ�����ţ� http://zxkdy.cn/ --> Zero��Ӱ��ӳ�ң�
-	20. http://www.afeitv.com/ --> ����Ӱ�����߹ۿ��� http://www.minimp4.com/ --> ��Ӱ������Դ������
+	19. http://www.dycsm.com/ --> 电影传送门； http://zxkdy.cn/ --> Zero电影放映室；
+	20. http://www.afeitv.com/ --> 阿飞影视在线观看； http://www.minimp4.com/ --> 电影网盘资源分享；
 	21. 
-	22. http://www.pniao.com/ --> �����Ӱ�� http://www.kanjushe.com/ --> �����磻
-	23. https://www.dy2018.com/ --> ��Ӱ�������أ�
-	24. https://www.jijidown.com/ --> Bվ��Ƶ���أ�
+	22. http://www.pniao.com/ --> 胖鸟电影； http://www.kanjushe.com/ --> 看剧社；
+	23. https://www.dy2018.com/ --> 电影天堂下载；
+	24. https://www.jijidown.com/ --> B站视频下载；
 	25. 
-	26. https://neets.cc/ --> neets׷���纫�磻 http://yyetss.com/ --> ����Ӱ��׷���磻
+	26. https://neets.cc/ --> neets追美剧韩剧； http://yyetss.com/ --> 人人影视追美剧；
 	27. 
-	28. https://greasyfork.org/zh-CN/scripts/39776-%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E7%9B%B4%E6%8E%A5%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B%E4%BF%AE%E6%94%B9%E7%89%88 --> �ٶ�����ֱ����������
+	28. https://greasyfork.org/zh-CN/scripts/39776-%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E7%9B%B4%E6%8E%A5%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B%E4%BF%AE%E6%94%B9%E7%89%88 --> 百度网盘直接下载助手
 	29. 
-	30. http://cn.epubee.com/books/ --> ePUB������⣻ http://www.hejizhan.com/html/search --> ��ǧ����վ(ѧ����Դ��)��
-	31. http://mebook.cc/ --> �ҵ�С���ݣ� https://www.yuekanshuwu.com/ --> �Ŀ����ݣ�
-	32. https://shuge.org/ --> ��� http://www.daizhige.org/# --> ��֪����飻
-	33. http://www.xuexi111.com/ --> ѧϰ���Ͽ⣻ http://www.xn--5rtnx620bw5s.tw/index.html --> ������®�ż���
+	30. http://cn.epubee.com/books/ --> ePUB电子书库； http://www.hejizhan.com/html/search --> 万千集合站(学术资源书)；
+	31. http://mebook.cc/ --> 我的小书屋； https://www.yuekanshuwu.com/ --> 阅看书屋；
+	32. https://shuge.org/ --> 书格； http://www.daizhige.org/# --> 殆知阁古书；
+	33. http://www.xuexi111.com/ --> 学习资料库； http://www.xn--5rtnx620bw5s.tw/index.html --> 汉川草庐古籍；
 	34. 
-	35. https://mp.weixin.qq.com/ --> ΢�Ź��ںŵ�½�� http://ipaiban.com/ --> ���Ű�-΢�ű༭����
-	36. http://wxbbx.jh1z.com/ --> ΢�Űٱ��䣻
-	37. http://naotu.baidu.com/ --> �ٶ���ͼ(˼ά��ͼ)��
+	35. https://mp.weixin.qq.com/ --> 微信公众号登陆； http://ipaiban.com/ --> 爱排版-微信编辑器；
+	36. http://wxbbx.jh1z.com/ --> 微信百宝箱；
+	37. http://naotu.baidu.com/ --> 百度脑图(思维简图)；
 	38. 
-	39. http://www.quanjingke.com/ --> ȫ����������ȫ��չʾ��
-	40. https://www.tikitiki.cn/ --> ���ɵ����֣�
-	41. https://www.52pojie.cn/ -->�ᰮ�ƽ���վ http://www.bokeboke.net/ --> �����ͣ�
+	39. http://www.quanjingke.com/ --> 全国各处景点全景展示；
+	40. https://www.tikitiki.cn/ --> 自由的音乐；
+	41. https://www.52pojie.cn/ -->吾爱破解网站 http://www.bokeboke.net/ --> 爱软客；
 	42. 
-	43. https://cn.office-converter.com/ --> ����ת����ʽ�� https://smallpdf.com/cn --> ��תPDF��
-	44. https://lightpdf.com/zh/ --> lightPDFת���� http://www.alltoall.net/ --> ��ȫ��ʽת����
+	43. https://cn.office-converter.com/ --> 在线转换格式； https://smallpdf.com/cn --> 玩转PDF；
+	44. https://lightpdf.com/zh/ --> lightPDF转换； http://www.alltoall.net/ --> 最全格式转换；
 
 
