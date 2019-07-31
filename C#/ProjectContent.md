@@ -180,6 +180,8 @@ bindComboxEdit(txtMatID, dt, );
 comboxEdit.Properties.Items.Clear();
 foreach(DataRow row in dataTable.Rows){
 comboxEdit.Properties.Items.Add(row["MatName"]); }
+//comboxEdit根据输入自动完成设置
+comboxEdit.Properties.AutoComplete = true;
 ```
 
 ###### 15、父子表联动效果实现(使用加载form窗体，则联动效果不好实现)
@@ -335,3 +337,6 @@ this.winGridViewPager1.GridView1.Columns.ColumnByFieldName("DeliveryNum").Option
 
 ```
 
+23、
+
+​	protected internal virtual GridColumn CreateColumn();

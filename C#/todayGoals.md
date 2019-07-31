@@ -138,3 +138,6 @@ string where = GetConditionSql2();
             }
             this.winGridViewPager2.DataSource = dt.DefaultView; 
           //  this.winGri
+          
+
+178，503

@@ -4,11 +4,11 @@
 
 - ###### [爬虫学习项目，到这里来就对了](https://github.com/facert/awesome-spider)
 
+- ###### [爬虫项目练习！](https://github.com/shengqiangzhang/examples-of-web-crawlers?utm_source=gold_browser_extension)
+
 - ###### [最全中文诗歌诗词文集数据库](https://github.com/chinese-poetry/chinese-poetry)
 
 - ###### [结构化算法刷题训练指南，快刷起来](https://github.com/apachecn/awesome-algorithm)
-
-- ###### [MarkDown编辑器](https://github.com/notable/notable)
 
 - ###### [Java项目](https://mp.weixin.qq.com/s/e0HSG0LU3utw3Oi7TauXAw)
 
@@ -33,6 +33,8 @@
 ###### [在线画图，思维导图、流程图，uml等都可以](https://www.processon.com/diagrams)
 
 ###### [知乎热榜，微信排行只用这一个就够了](http://guozhivip.com/rank/)
+
+###### [今日热榜，更全面](https://tophub.today/)
 
 ###### [可可英语，过六级就靠你了](http://www.kekenet.com/)
 

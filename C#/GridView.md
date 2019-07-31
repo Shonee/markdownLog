@@ -10,3 +10,15 @@ Included Components：包含组件
 
 ​	4、SearchLookUpEdit：带有内置查找面板，更迅速的进行查找
 
+
+
+
+
+```c#
+foreach (DevExpress.XtraGrid.Columns.GridColumn column in this.winGridViewPager1.gridView1.Columns)
+	{
+     	column.Width = 100;	//列宽设置固定值
+        column.BestFit();	//列宽设置随内容适应
+   	} 
+```
+
