@@ -129,3 +129,83 @@ public static void main(string[] args){
 ​	下午，回，，--->>> 虹桥 ，17号线 -> 青浦新城，打车到家。
 
 ​	
+
+```c#
+/// <summary>
+        /// 右键添加功能到我的工作区以及从我的工作区删除
+        /// </summary>
+        private void myWorkSpace_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            //获取我的工作区下的功能
+            List<Function_UserInfo> list = BLLFactory<Function_User>.Instance.GetAll();
+            //获取最大ID
+            string maxID = list.Count == 0 ? "0" : list.Max(p => p.ID.ToInt32()).ToString();
+            //有选中值是才能进行操作
+            if (itemname != null)
+            {
+                //添加到我的工作区功能
+                if (myWorkSpace.Items[0].Selected)
+                {
+                    //我的工作区有内容去判断要添加的是否重复，没有内容的话直接添加
+                    if (list.Count > 0)
+                    {
+                        int hasfunction = list.Where(m => m.Name.Contains(itemname)).ToList().Count;
+                        if (hasfunction > 0) { MessageBox.Show("请不要重复添加！"); }
+                    }
+                    //直接添加
+                    else
+                    {
+                        Function_UserInfo newInfo = new Function_UserInfo();
+                        newInfo.ID = (maxID.ToInt32() + 1).ToString();
+                        //拿到要添加到我的工作区的功能名称
+                        newInfo.Name = itemname;
+                        //设置这是属于谁的工作区
+                        newInfo.Create_Name = FLsimpleUtils.CreateID;
+                        newInfo.Create_FullName = FLsimpleUtils.CreateName;
+                        if (BLLFactory<Function_User>.Instance.Insert(newInfo)) { MessageBox.Show("添加成功！"); }
+                        //刷新功能列表
+                        InitAuthorizedUI();
+                    }
+
+​```
+            }
+            //从我的工作区移除功能
+            else if (myWorkSpace.Items[1].Selected)
+            {
+                //如果我的工作区内容大于零进行判断有要删除的功能，有的话删除，没有提示
+                if (list.Count > 0)
+                {
+                    int hasfunction = list.Where(m => m.Name.Contains(itemname)).ToList().Count;
+                    if (hasfunction > 0)
+                    {
+                        if (BLLFactory<Function_User>.Instance.Delete(list.Where(m => m.Name.Contains(itemname)).ToList()[0].ID)) { MessageBox.Show("删除成功！"); }
+                        //刷新功能列表
+                        InitAuthorizedUI();
+                    }
+                    else { MessageBox.Show("未添加此功能到我的工作台!"); }
+                }
+                else { MessageBox.Show("我的工作台没有内容！"); }
+            }
+        }
+        //当添加我的工作区结束时，将记录的功能栏Item的字符串初始化
+        itemname = null;
+    }
+
+//树形结构功能菜单 && 联合我的工作台数据表
+        private void InitTreeList()
+        {
+            this.treeList1.Nodes.Clear();
+            List<FunctionInfo> memuList = BLLFactory<Function>.Instance.Find("(1=1)", "ORDER BY SortCode ASC");
+            List<Function_UserInfo> myFunctionList = BLLFactory<Function_User>.Instance.Find(string.Format("Create_name = '{0}'", Portal.gc.LoginInfo.Name));
+            memuList = memuList.Where(p => Portal.gc.HasFunction(p.ControlID) && !p.ControlID.Contains("/")).ToList();
+            this.treeList1.DataSource = myFunctionList.Select(p => new { p.ID, p.PID, p.Name }).Union(memuList.Select(a => new { a.ID, a.PID, a.Name })).ToList();
+            this.treeList1.ContextMenuStrip = myWorkSpace;
+        }
+
+
+
+
+```
+
+
+
