@@ -6,6 +6,24 @@
 
 - ###### [爬虫项目练习！](https://github.com/shengqiangzhang/examples-of-web-crawlers?utm_source=gold_browser_extension)
 
+- ==高亮==   
+
+ <font face="黑体">我是黑体字</font> 
+
+ <font face="微软雅黑">我是微软雅黑</font> 
+
+ <font face="STCAIYUN">我是华文彩云</font> 
+
+ <font color=#0099ff size=12 face="黑体">黑体</font> 
+
+ <font color=#00ffff size=3>null</font> 
+
+<font color="green" size=5>绿色, 啦啦啦啦啦啦啦啦。 </font> 
+
+-   <table><tr><td bgcolor=#FF4500>这里的背景色是：OrangeRed，  十六进制颜色值：#FF4500， rgb(255, 69, 0)</td></tr></table>  
+
+- 
+
 - ###### [最全中文诗歌诗词文集数据库](https://github.com/chinese-poetry/chinese-poetry)
 
 - ###### [结构化算法刷题训练指南，快刷起来](https://github.com/apachecn/awesome-algorithm)

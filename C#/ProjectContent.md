@@ -22,16 +22,6 @@ this.winGridViewPager1.gridView1.OptionsView.NewItemRowPosition = DevExpress.Xtr
 
 ​	适配器插入(更新表或者行对象)数据
 
-4、
-
-```c#
-	//guid的生成方法
-    //Guid id =  Guid.NewGuid();
-    //MessageBox.Show(id.ToString());
-```
-
-
-
 5、`treeView`中节点添加图标后，点击闪烁问题		
 
 6、属性Anchor，定义当前控件上下左右绑定到容器的边缘
@@ -179,7 +169,7 @@ bindComboxEdit(txtMatID, dt, );
 //清除已有的数据绑定
 comboxEdit.Properties.Items.Clear();
 foreach(DataRow row in dataTable.Rows){
-comboxEdit.Properties.Items.Add(row["MatName"]); }
+	comboxEdit.Properties.Items.Add(row["MatName"]); }
 //comboxEdit根据输入自动完成设置
 comboxEdit.Properties.AutoComplete = true;
 ```
@@ -321,7 +311,6 @@ condition.AddCondition("isdelete", 0, SqlOperator.Like);
                    this.winGridViewPager1.DataSource = dt.DefaultView;
    ```
 
-
 22、实现`gridView`显示数据的编辑，按钮，下拉列表等功能
 
 ###### [实现编辑](https://www.cnblogs.com/wuhuacong/p/6220826.html)
@@ -330,7 +319,7 @@ condition.AddCondition("isdelete", 0, SqlOperator.Like);
 
 ```c#
 //关闭只读，开启可编辑
-this.winGridViewPager1.gridView1.OptionsBehavior.ReadOnly = false;             this.winGridViewPager1.gridView1.OptionsBehavior.Editable = true;
+this.winGridViewPager1.gridView1.OptionsBehavior.ReadOnly = false;   this.winGridViewPager1.gridView1.OptionsBehavior.Editable = true;
 //如果只编辑部分列，则要开启全部，然后将其余列的编辑关闭
 this.winGridViewPager1.GridView1.Columns.ColumnByFieldName("DeliveryNum").OptionsColumn.AllowEdit = false;
 //只有在关闭已读、开启编辑状态下，才能实现下拉列表等功能

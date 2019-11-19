@@ -2,7 +2,7 @@
 
 ###### 20190826友雅始
 
-###### 	合同订单中调用工作流api接口
+###### 	合同订单中调用工作流`api`接口
 
 ```c#
 ///注释的地方暂时可以不用，可以用来获取调用接口时返回的结果数据
@@ -28,7 +28,7 @@ public void GetHttp()
 
 
 
-###### 20190909服良K3续
+###### 20190909服良`K3`续
 
 ###### 	想办法将Item的内容做成一个方法，省去每次数据同步时都要重写
 
@@ -76,20 +76,6 @@ public List<Tim_LinqTable> GetAllSonID(int p_id)
 
 
 
-###### 20190919服良项目需要修改问题
-
-- [ ] 原材料合同导入时，
-  - 数据是同一品番的物料归类信息，不需要做检查，直接导入即可
-  - 品名根据中英文对照表
-- [ ] 装箱单导入时，
-  - 根据品番到原材料数据中获取单价，
-  - 然后是品番+色号匹配物料基本信息
-  - 品名根据中英文对照表
-- [ ] 物料信息模块，
-  - 数据多了，有点卡，如何优化？？
-
-
-
 ###### 20190920 spreadsheet内容
 
 ​	spreadsheet中单元格合并：
@@ -104,5 +90,23 @@ worksheet.Range[range].Merge(); 		//合并
 ```c#
 string range = "A3:F" + row;		//选择要合并的范围
 worksheet.Range[range].Borders.SetAllBorders(Color.Black, BorderLineStyle.Thin);			//添加边框	
+```
+
+
+
+###### 20190927 `ChexkedComboxEdit`组件
+
+```c#
+//绑定数据源，并设置 显示-存储 值
+CheckedCombox.Properties.DataSource = dt;
+CheckedCombox.Properties.DisplayMember = "NAME";
+CheckedCombox.Properties.ValueMember = "ID";
+//设置多选时，值根据什么区分，同时显示内容时根据设定字符自动分割
+cmb_check_CKID.Properties.SeparatorChar = ',';
+//反绑定！！
+//查询界面默认选中全部，多选内容直接赋值即可，提前设置好分割符
+this.chkCustomerTypeQuery.EditValue = "全部";
+//赋值后，一定要调用下面方法，才能正确显示内容
+this.chkCustomerTypeQuery.RefreshEditValue();
 ```
 
