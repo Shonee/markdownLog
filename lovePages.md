@@ -6,6 +6,10 @@
 
 - ###### [爬虫项目练习！](https://github.com/shengqiangzhang/examples-of-web-crawlers?utm_source=gold_browser_extension)
 
+- ###### [JavaGuide](https://github.com/Snailclimb/JavaGuide)
+
+- ###### [CS-Notes](https://github.com/CyC2018/CS-Notes?utm_source=gold_browser_extension)
+
 - ==高亮==   
 
  <font face="黑体">我是黑体字</font> 
@@ -27,10 +31,6 @@
 - ###### [最全中文诗歌诗词文集数据库](https://github.com/chinese-poetry/chinese-poetry)
 
 - ###### [结构化算法刷题训练指南，快刷起来](https://github.com/apachecn/awesome-algorithm)
-
-- ###### [Java项目](https://mp.weixin.qq.com/s/e0HSG0LU3utw3Oi7TauXAw)
-
-- ###### [GitHub-java热门项目](https://github.com/trending/java?since=monthly)
 
 - ###### [从程序员到CTO](https://github.com/0voice/from_coder_to_expert)
 

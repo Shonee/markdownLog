@@ -1,8 +1,7 @@
-###### XtraTreeList是一个多功能的数据可视系统，可以把信息显示为树状、网格或者两者的结合——在数据绑定模式或者非绑定模式中
+[TOC]
 
-#### TreeList的使用：
-
-##### 	数据库的绑定
+<center><h5>XtraTreeList是一个多功能的数据可视系统，可以把信息显示为树状、网格或者两者的结合——在数据绑定模式或者非绑定模式中</h5></center>
+###### 	数据库的绑定
 
 ```c#
 		//使用适配器映射连接获取数据库中数据表
@@ -18,64 +17,47 @@
         sda.Fill(table);                                  	//填充数据
 ```
 
-​		绑定数据源DataSource
+###### 	TreeList的常用属性
 
 ```c#
-			treeList.DataSource = table; 
+//绑定数据源DataSource			
+treeList.DataSource = table; 
+//绑定属性KeyFieldName  //绑定属性ParentFieldName
+
+//更改NodeName列的显示标题，NodeName是数据表中的列
+treeList.Columns["NodeName"].Caption = "地区名称";	
+//设置为false则执行后页面数据不可更改
+treeList.OptionsBehavior.Editable = false;
+//复选框CheckBox可见
+treeList.OptionsView.ShowCheckBoxes = true;	
+//默认展开所有的节点
+treeList.ExpandAll();  
 ```
 
-​		绑定属性KeyFieldName
-
-​		绑定属性ParentFieldName
-
-##### 	TreeList的常用属性
-
-​		列名标题自定义
+###### 其他属性       
 
 ```c#
-			treeList.Columns["NodeName"].Caption = "地区名称";
-			//更改NodeName列的显示标题，NodeName是数据表中的列
-```
+//使用XP主题
+treeList1.LookAndFeel.UseWindowsXPTheme = true;    	
 
-​		数据不可更改属性
-
-```c#
-			treeList.OptionsBehavior.Editable = false;	//设置为false则执行后页面数据不可更改
-```
-
-​		复选框CheckBox可见
-
-```c#
-			treeList.OptionsView.ShowCheckBoxes = true;	//复选框显示
-```
-
-​		默认展开层级菜单
-
-```c#
-			treeList.ExpandAll();                       //默认展开所有的节点
-```
-
-```c#
-        //其他属性
-		treeList1.LookAndFeel.UseWindowsXPTheme = true;    	//使用XP主题
-        treeList1.LookAndFeel.UseDefaultLookAndFeel = false;
-        treeList1.OptionsView.ShowColumns = false;       	//隐藏列名
-        treeList1.OptionsView.ShowColumns = false;       	//显示展开按钮
-        treelist1.OptionView.ShowIndicator = false;    		//隐藏最前面的行指示列
-        treeList1.Appearance.FocusedCell.BackColor = Color.LightSteelBlue;    //焦点行颜色渐变
-        treeList1.Appearance.FocusedCell.BackColor2 = Color.SteelBlue;
-        treeList1.OptionsView.ShowHorzLines = false;     	//隐藏行列边框
-        treeList1.OptionsView.ShowVertLines = false;
-		treeList1.OptionSelection.InvertSelection = true;	//选中时的颜色
+treeList1.LookAndFeel.UseDefaultLookAndFeel = false;
+//隐藏列名
+treeList1.OptionsView.ShowColumns = false;       	
+//显示展开按钮
+treeList1.OptionsView.ShowColumns = false; 
+//隐藏最前面的行指示列
+treelist1.OptionView.ShowIndicator = false;    		
+//焦点行颜色渐变
+treeList1.Appearance.FocusedCell.BackColor = Color.LightSteelBlue;    
+treeList1.Appearance.FocusedCell.BackColor2 = Color.SteelBlue;
+//隐藏行列边框
+treeList1.OptionsView.ShowHorzLines = false;     	
+treeList1.OptionsView.ShowVertLines = false;
+//选中时的颜色
+treeList1.OptionSelection.InvertSelection = true;	
 //隐藏焦点行边框   	
 treeList1.OptionsView.FocusRectStyle = 	DevExpress.XtraTreeList.DrawFocusRectStyle.None;  
 ```
-
-
-
-##### 	TreeList的常用操作
-
-###### 		节点选中高亮
 
 ###### 		使用复选框时父子联动效果
 
@@ -149,12 +131,12 @@ treeList1.OptionsView.FocusRectStyle = 	DevExpress.XtraTreeList.DrawFocusRectSty
                 }
 ```
 
-##### 		为每一个节点添加节点图片(选中状态和未选中状态图片切换)
+###### 		为每一个节点添加节点图片(选中状态和未选中状态图片切换)
 
 ```c#
-		//工具栏选择imageList控件拖动到界面，添加图标文件；
-		//在treeList控件的属性中找到SelectImageList选择存在的imageList，这样两个控件即连接起来
-		//初始默认所有行的图标均为0号图标文件，通过*treeList1_CustomDrawNodeImages()*事件来设置。
+//工具栏选择imageList控件拖动到界面，添加图标文件；
+//在treeList控件的属性中找到SelectImageList选择存在的imageList，这样两个控件即连接起来
+//初始默认所有行的图标均为0号图标文件，通过*treeList1_CustomDrawNodeImages()*事件来设置。
 		private void treeList1_CustomDrawNodeImages(object sender, DevExpress.XtraTreeList.CustomDrawNodeImagesEventArgs e)
         {	//使用各种条件来为不同的节点添加不同的图标文件
             //有子菜单

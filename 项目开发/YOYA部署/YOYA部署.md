@@ -1,3 +1,5 @@
+[TOC]
+
 ERP登录用户：ZX
 
 密码：123
@@ -5,6 +7,8 @@ ERP登录用户：ZX
 远程服务器账户：李瑞
 
 密码：LR@987654321YOUYA
+
+WIFI：88157709
 
 
 
@@ -39,3 +43,9 @@ Data Source=
 
 
 WinFramework
+
+
+
+###### 20191218sqlserver数据库局域网共享设置（测试成功）
+
+[教程](https://blog.csdn.net/zw_2011/article/details/8872129)

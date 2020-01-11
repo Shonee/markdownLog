@@ -33,7 +33,7 @@ private void xtraTabControl_CloseButtonClick(object sender, EventArgs e)
 }
 ```
 
-2.双击标签关闭
+###### 2.双击标签关闭
 
 ```c#
 //得到你现在鼠标所在的Page
@@ -60,7 +60,7 @@ private void xtraTabControl_MouseDoubleClick(object sender, MouseEventArgs e)
         }
 ```
 
-###### 2.隐藏XtraTabControl的Page
+###### 3.隐藏XtraTabControl的Page
 
 ```c#
 //将标签隐藏，只显示当前选择页面，不可切换

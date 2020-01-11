@@ -84,16 +84,6 @@ str = str.ToLower();	//所有字符转换成小写
 
 
 
-worksheet中屏幕定位到某行某列：
-
-```c#
-//定位到第 row+1 行 / column+1 列
-worksheet.ScrollToRow(row);
-worksheet.ScrollToColumn(column);
-```
-
-worksheet中Cells只能选择有数据的内容行列范围内，超出会报错，用Rows
-
 form窗体中当前用户属性：
 
 `LoginUserInfo.FullName;`//当前登录用户名

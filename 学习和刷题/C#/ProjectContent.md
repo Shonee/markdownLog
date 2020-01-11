@@ -38,12 +38,6 @@ this.winGridViewPager1.gridView1.OptionsView.NewItemRowPosition = DevExpress.Xtr
 
 ###### 9、treeView组件属性labelEdit，节点是否可以编辑
 
-###### 10、``splitContainer`折叠panel的功能
-
-```c#
-splitContainer1.Panel2Collapsed = true;//折叠panel2
-```
-
 ###### 11、本地上传图片的操作
 
 ```C#
@@ -273,59 +267,3 @@ MT_MatInInfo info = BLLFactory<MT_MatIn>.Instance.FindByID(ID);
 condition.AddCondition("isdelete", 0, SqlOperator.Like);
 ```
 
-21、实现gridView自定义显示内容！！
-
-1. ​	新建一个DataTable,用来存放自定义的数据，并作为数据源绑定给gridView
-
-2. ​	新建Row，用于接收数据库中的每一行的数据，只能每个列进行赋值，循环迭代
-
-3. ​	将Row添加到table，将table绑定到gridView
-
-4. ```c#
-   //重新定义数据源进行绑定，便于操作gridView显示内容
-   string columns = "id,MatInNO,InDepartID,InDepotID,InType,ForID,InDatetime,InWorkerID,KGWorkerID,SendMan,IsChecked,InMemo,create_date,create_name,update_date,update_name";
-   //根据自定义字符串创建dataTable
-   DataTable dt = DataTableHelper.CreateTable(columns);
-               foreach (MT_MatInInfo info in list) 
-               {
-                   DataRow row = dt.NewRow();
-                   row["id"] = info.Id;
-                   row["MatInNO"] = info.MatInNO;
-                   row["InDepotID"] = BLLFactory<SR_Depots>.Instance.FindByID(info.InDepotID).DepotName;
-                   row["InDepartID"] = BLLFactory<OU>.Instance.FindByID(info.InDepartID).Name;
-                   row["InType"] = info.InType;
-                   //row["ForID"] = BLLFactory<PU_SendItem>.Instance.FindByID(info.ForID).BuyOrd;
-                   row["InDatetime"] = info.InDatetime;
-                   row["InWorkerID"] = info.InWorkerID;
-                   row["KGWorkerID"] = info.KGWorkerID;
-                   row["SendMan"] = info.SendMan;
-                   row["IsChecked"] = info.IsChecked;
-                   row["InMemo"] = info.InMemo;
-                   row["create_date"] = info.Create_date;
-                   row["create_name"] = info.Create_name;
-                   row["update_date"] = info.Update_date;
-                   row["update_name"] = info.Update_name;       
-                   dt.Rows.Add(row);   
-               }
-               //绑定数据源
-                   this.winGridViewPager1.DataSource = dt.DefaultView;
-   ```
-
-22、实现`gridView`显示数据的编辑，按钮，下拉列表等功能
-
-###### [实现编辑](https://www.cnblogs.com/wuhuacong/p/6220826.html)
-
-###### [实现按钮、下拉列表](https://www.cnblogs.com/wuhuacong/p/6240114.html)
-
-```c#
-//关闭只读，开启可编辑
-this.winGridViewPager1.gridView1.OptionsBehavior.ReadOnly = false;   this.winGridViewPager1.gridView1.OptionsBehavior.Editable = true;
-//如果只编辑部分列，则要开启全部，然后将其余列的编辑关闭
-this.winGridViewPager1.GridView1.Columns.ColumnByFieldName("DeliveryNum").OptionsColumn.AllowEdit = false;
-//只有在关闭已读、开启编辑状态下，才能实现下拉列表等功能
-
-```
-
-23、
-
-​	protected internal virtual GridColumn CreateColumn();

@@ -137,14 +137,6 @@ update tb set B=(case when len(A)>0 then C  end) ,D=(case when len(A)<=0 then E 
 select '操作人' = CASE when update_name is NULL then 111 else update_by end from MT_Materiels
 ```
 
-###### 字符型数，位数固定，长度不够时前边补0的方法：
-
-```c#
-//固定字符串长度，如果不够则补0，最终得到0001
-number = "1";
-newInfo.FNumber = number.ToString().PadLeft(4, '0');
-```
-
 
 
  
