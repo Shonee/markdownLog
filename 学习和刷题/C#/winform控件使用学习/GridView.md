@@ -131,5 +131,24 @@ gridView1.OptionsView.GroupFooterShowMode = DevExpress.XtraGrid.Views.Grid.Group
 gridView1.OptionsView.ShowFooter = true;
 ```
 
+###### 9、gridView转义显示内容和实际内容：
 
+目前三种方法：
+
+（1）：实体Info添加虚拟字段，获取到数据集合、赋值数据源之前对当前集合中所有的ID，转换成实现显示内容赋值给增加的虚拟字段，用来显示，不再显示ID字段。
+
+​	①遍历数据源集合
+
+​	②针对每一个要转义的字段，使用linq遍历查询转义结果
+
+（2）：使用linq配合CustomColumnDisplayText方法，显示gridView页面时，触发方法，针对ID列，使用linq在已有集合中查询转义结果，并对ID显示转义结果。
+	①每一列都触发方法
+
+​	②触发方法后，使用linq转义
+
+（3）：使用Dictionary字典配合CustomColumnDisplayText方法，在获取数据源后，对数据源集合中每个要转义的字段，去字典中查询，如果没有转义结果，则查询对应转义结果，放入集合，已有则不查询，最后gridView显示时触发方法，使用字典进行转义。
+
+​	①：遍历数据源集合，不会重复查询，每个ID只查询一次
+
+​	②：触发方法后，使用字典转义（数量小，针对性强）
 

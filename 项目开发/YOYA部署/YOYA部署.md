@@ -49,3 +49,19 @@ WinFramework
 ###### 20191218sqlserver数据库局域网共享设置（测试成功）
 
 [教程](https://blog.csdn.net/zw_2011/article/details/8872129)
+
+
+
+友雅数据库连接：
+
+<add name="sqlserver" connectionString="Persist Security Info=True;Data Source=121.207.5.17;Initial Catalog=YoYaOA;User ID=exun;Password=YouYa2017,888"
+      providerName="System.Data.SqlClient" />
+    <add name="WHC.SHFL.Properties.Settings.SHFLBasicConnectionString"
+      connectionString="Data Source=121.207.5.17;Initial Catalog=YoYaOA;User ID=exun;Password=YouYa2017,888"
+      providerName="System.Data.SqlClient" />
+    <add name="WHC.SHFL.Properties.Settings.SHFLbasisMessage" 
+      connectionString="Data Source=121.207.5.17;Initial Catalog=YoYaOA;User ID=exun;Password=YouYa2017,888"
+      providerName="System.Data.SqlClient" />
+    <add name="FL_DataSet.Properties.Settings.SHFL_TextConnectionString"
+      connectionString="Data Source=121.207.5.17;Initial Catalog=YoYaOA;User ID=exun;Password=YouYa2017,888"
+      providerName="System.Data.SqlClient" />

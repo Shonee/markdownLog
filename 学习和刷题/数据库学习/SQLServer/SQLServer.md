@@ -17,3 +17,6 @@ UPDATE TB_DictData SET IsSync = 0, SyncReturnValue = "" WHERE IsSync is NULL
 SELECT * FROM [user] WHERE u_name LIKE '%三%'
 ```
 
+###### 3.[SQL2005安装教程](https://mp.weixin.qq.com/s/AudhTJdblnYieusQqfpBVQ)
+
+远程

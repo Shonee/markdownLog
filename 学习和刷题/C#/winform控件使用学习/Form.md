@@ -4,8 +4,6 @@
  		/// <summary>
         /// 点击导航标签，新建窗体，如果已存在，则聚焦到窗体
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         RibbonForm1 form1;//每一个窗体对应一个对象
         private void navBarItem1_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
@@ -29,6 +27,13 @@ subForm sform = new subForm();  //新建窗体
 sform.MdiParent = this;         //设置新窗体作为当前窗体的子窗体
 sform.Parent = panel;         //设置子窗体的容器为父窗体中的panel，没有panel时不用写该行
 sform.show();         //显示窗体
+
+//当前窗体的容器中显示另一个窗体
+sysholiday = new FrmPU_ProMat();
+sysholiday.TopLevel = false;
+sysholiday.Dock = DockStyle.Fill;
+sysholiday.FormBorderStyle = FormBorderStyle.None; splitContainer1.Panel2.Controls.Add(sysholiday);
+sysholiday.Visible = true;
 ```
 
 3、点击关闭按钮，提示是否关闭，确定后退出系统功能实现

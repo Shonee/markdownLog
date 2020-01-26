@@ -18,8 +18,8 @@ lookupedit.NullText = "";//空时的值
 lookupedit.DropDownRows = 10;//下拉框行数  
 
 //自适应宽度（两个都要有）
-this.txtForID.Properties.BestFit();
-lookUpEdit1.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup; 
+mat.Properties.BestFit();
+mat.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup; 
 
 //要使用户可以输入，这里须设为Standard  
 lookupedit.TextEditStyle = TextEditStyles.Standard;
