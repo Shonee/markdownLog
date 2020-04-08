@@ -10,14 +10,6 @@ excel表中数据的获取
 
 ​					大小也是一样，SIZE + [0123]
 
-###### 正则表达式实现从字符串中提取数字：
-
-```c#
-//@代表强转义，跟在其后的所有字符均为字符串内容，不会和内部内部定义字符冲突
-//()中的内容会放在返回值的value属性中
-int num = Regex.match(strs,@"(\d+)").value;
-```
-
 问题：
 
 ​	1、物料品番、名称相同，规格、色号不同时，是两种物料？
@@ -62,7 +54,6 @@ int num = Regex.match(strs,@"(\d+)").value;
 //1、split的重载方法
 string result = 
   Text.Split(new string[] {"COL",":"},StringSplitOptions.None)[1];
-//2、使用正则中的split方法
 ```
 
 
@@ -73,14 +64,6 @@ string result =
 str = str.ToUpper();	//所有字符转换成大写
 str = str.ToLower();	//所有字符转换成小写
 ```
-
-
-
-###### 20190802：
-
-###### 项目打包：
-
-**[VS2010winform项目打包方法](https://www.cnblogs.com/hesijian/archive/2013/09/12/3316549.html)**
 
 
 

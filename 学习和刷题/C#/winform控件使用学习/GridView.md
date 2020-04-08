@@ -120,9 +120,33 @@ DataTable dt = DataTableHelper.CreateTable(columns);
 this.winGridViewPager1.DataSource = dt.DefaultView;
 ```
 
-###### 7、实现gridView选中多行数据功能（按住Ctrl点击）
+###### 7.1、实现gridView选中多行数据功能（按住Ctrl点击）
 
 设置属性：Multiselect = true; 即可
+
+###### 7.2、实现gridView选中多行数据功能（显示勾选框）
+
+```c#
+//开启显示复选框
+gridView.OptionSection.MultiSelect = true;
+
+gridview.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
+
+gridview.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DevExpress.Utils.DefaultBoolean.True;
+//修改样式
+this.repositoryItemCheckEdit1.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;  
+
+//获取选中值
+for (int i = 0; i < this.gridView1.RowCount; i++)
+{
+    if (this.gridView1.IsRowSelected(i))
+    {
+        
+    }
+}
+```
+
+
 
 ###### 8、`gridView`显示页脚信息：
 
@@ -131,7 +155,11 @@ gridView1.OptionsView.GroupFooterShowMode = DevExpress.XtraGrid.Views.Grid.Group
 gridView1.OptionsView.ShowFooter = true;
 ```
 
-###### 9、gridView转义显示内容和实际内容：
+###### 9、去除 GridView 头上的 "Drag a column header here to group by that column"
+
+找到：OptionView -> 将 ShowGroupPanel ： 设置为 false ;
+
+###### 10、gridView转义显示内容和实际内容：
 
 目前三种方法：
 
@@ -151,4 +179,86 @@ gridView1.OptionsView.ShowFooter = true;
 ​	①：遍历数据源集合，不会重复查询，每个ID只查询一次
 
 ​	②：触发方法后，使用字典转义（数量小，针对性强）
+
+###### 11、GridView数据行实体与DataTable之间的转换
+
+① 强类型实体转换成弱DataTable类
+
+> 不能进行强制转换，而是使用DataTable的辅助类进行转换
+>
+> DataTable dt = DataTableHelper.ToDataTable(SizeDetailList);
+
+② 弱DataTable（DataRow）转换成强实体Info（使用反射）
+
+```c#
+static void DataBind(object entity, DataRow row)
+{
+    //获取实体类类型
+    Type type = entity.GetType();
+    //获取实体类所有公共属性
+    PropertyInfo[] infors = type.GetProperties();
+    for (int i = 0; i < infors.Length; i++)
+    {
+        //如果DataRow列名包含此属性
+        if (row.Table.Columns.Contains(infors[i].Name))
+        {
+            //获取值
+            object value = Convert.ChangeType(row[infors[i].Name], infors[i].PropertyType);
+            infors[i].SetValue(entity, value, null);
+        }
+    }
+}
+
+    
+public static T D2E<T>(DataRow r)
+{ 
+    T t = default(T);
+    t = Activator.CreateInstance<T>();//获取类型
+    PropertyInfo[] ps = t.GetType().GetProperties();//获取类所有属性
+    foreach(var item in ps)	//遍历所有属性，有则赋值
+    {
+        if (r.Table.Columns.Contains(item.Name)) 
+        { 
+            object v = r[item.Name];
+            if (v.GetType() == typeof(System.DBNull))
+                v = null;
+            item.SetValue(t,v,null);
+        }
+    }
+    return t;
+}
+
+```
+
+###### 12、gridView中点击列标题时获取当前列的fieldName属性值
+
+> 使用gridView的鼠标响应事件 + 点击位置获取 + 获取gridView列标题 + 获取鼠标状态 
+
+```c#
+this.winGridViewPager1.gridView1.MouseDown += new MouseEventHandler(gridView1_MouseDown);
+
+void gridView1_MouseDown(object sender, MouseEventArgs e)
+{
+    if (e.Button == System.Windows.Forms.MouseButtons.Left) 
+    {
+        //获取鼠标点击位置
+        DevExpress.XtraGrid.Views.Grid.ViewInfo.GridHitInfo gridHitInfo = this.winGridViewPager1.gridView1.CalcHitInfo(e.X, e.Y);
+
+        ////获取该列右边线的x坐标
+        //DevExpress.XtraGrid.Views.Grid.ViewInfo.GridViewInfo gridViewInfo = (DevExpress.XtraGrid.Views.Grid.ViewInfo.GridViewInfo)this.winGridViewPager1.gridView1.GetViewInfo();
+        //int x = gridViewInfo.GetColumnLeftCoord(gridHitInfo.Column) + gridHitInfo.Column.Width;
+        ////右边线向左移动3个像素位置不弹出对话框（实验证明3个像素是正好的）
+        //if (e.X < x - 3)
+        //{
+        //    DevExpress.XtraEditors.XtraMessageBox.Show("点击Name列标题！");
+        //}
+
+        //this.winGridViewPager1.Cursor == Cursors.Default  鼠标在边界线上点击可以更改宽度，此时鼠标形状不是默认状态，要排除
+        if (Cursor.Current == Cursors.Default && gridHitInfo.InColumnPanel) // && info.Column.FieldName.Equals("MatName")
+        {
+            DevExpress.XtraEditors.XtraMessageBox.Show("点击" + gridHitInfo.Column.FieldName + "列标题！");
+        }
+    }
+}
+```
 

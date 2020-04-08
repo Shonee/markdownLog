@@ -75,21 +75,6 @@ list_distinct = list_distinct.Distinct().ToList();
 list_distinct = list_Persons.GroupBy(c => c.name).Select(c => c.First());
 ```
 
-正则表达式匹配逗号间隔字符串
-
-1、开头和结尾不能是逗号
-
-2、可以只有一个值没有逗号
-
-3、值是数字类型的值
-
-```c#
-//指定开头类型(\d+,)，*代表可以重复0次或多次，\d+$代表以此结尾	
-	^(\d+,)*\d+$
-//使用正则表达式进行字符串判断,返回bool类型
-CRegex.IsMatch(str, "^(\\d+,)*\\d+$");
-```
-
 ###### 使用`Linq`对数据array，集合list中的数值进行求和运算
 
 ```c#
